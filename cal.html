@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>calculator</title>
+  </head>
+
+  <body bgcolor="E0D5D3">
+    <form name="calculator">
+      <input type="text" name="ans" id="inputf" value="">
+    <br>
+    <h1>
+<input type="button" value="1" onclick="document.calculator.ans.value+='1'">
+<input type="button" value="2" onclick="document.calculator.ans.value+='2'">
+<input type="button" value="3" onclick="document.calculator.ans.value+='3'">
+<input type="button" value="4" onclick="document.calculator.ans.value+='4'">
+<input type="button" name="" value="sin" onclick="sinclicked()">
+
+</br>
+<input type="button" value="5" onclick="document.calculator.ans.value+='5'">
+<input type="button" value="6" onclick="document.calculator.ans.value+='6'">
+<input type="button" value="7" onclick="document.calculator.ans.value+='7'">
+<input type="button" value="8" onclick="document.calculator.ans.value+='8'">
+<input type="button" name="" value="tan" onclick="tanclicked()">
+<br>
+<input type="button" value="9" onclick="document.calculator.ans.value+='9'">
+<input type="button" value="0" onclick="document.calculator.ans.value+='0'">
+<input type="button" value="*" onclick="document.calculator.ans.value+='*'">
+<input type="button" value="+" onclick="document.calculator.ans.value+='+'">
+<input type="button" name=""   value="cos" onclick="cosclicked()">
+</br>
+<input type="button" value="-" onclick="document.calculator.ans.value+='-'">
+<input type="button" value="/" onclick="document.calculator.ans.value+='/'">
+<input type="button" value="clr" onclick="document.calculator.ans.value=''">
+<input type="button" value="=" onclick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+<input type="button" value="√" onClick="sRoot()">
+<br>
+<input type="button" value="sqr" class="button symbol" onclick="insertOp()">
+<input type="button" value="."  onclick="insertDec()">
+
+</br>
+    </h1>
+    </form>
+  </body>
+</html>
+
+<script type="text/javascript">
+    var exp = '', number, decimal, equal, operator, allowSR = '';
+
+      function sinclicked() {
+      calculator.ans.value=Math.sin(calculator.ans.value);
+    }
+    function tanclicked() {
+    calculator.ans.value=Math.sin(calculator.ans.value);
+    }
+    function cosclicked() {
+    calculator.ans.value=Math.sin(calculator.ans.value);
+    }
+    function sRoot() {
+        document.getElementById("inputf").value = Math.sqrt(document.getElementById("inputf").value);
+    }
+    function insertDec(){
+        document.getElementById("inputf").value = document.getElementById("inputf").value+'.'; 
+    }
+
+function insertOp(){
+    document.getElementById("inputf").value = document.getElementById("inputf").value * document.getElementById("inputf").value;
+}
+
+</script>
